@@ -2,26 +2,46 @@ import React, { Component } from "react";
 // import "./App.css";
 
 class Counter extends Component {
-  state = {
-    value: this.props.value,
-  };
   render() {
-    console.log(this.state.value);
     return (
-      <div>
-        <span className="btn btn-primary">{this.state.value}</span>{" "}
-        <button onClick={this.handleIncrement} className="btn btn-secondary">
-          Increase
-        </button>
+      <div className="py-1 d-flex justify-content-center align-items-center">
+        <span className={this.addClass()}>{this.props.value}</span>{" "}
+        <div>
+          <button
+            onClick={() => {
+              this.props.onIncrement(this.props.counter);
+            }}
+            className="btn btn-secondary mx-2"
+          >
+            +
+          </button>
+          <button
+            onClick={() => {
+              this.props.onDecrement(this.props.counter);
+            }}
+            className="btn btn-secondary mx-2"
+          >
+            -
+          </button>
+          <button
+            onClick={() => this.props.onDelete(this.props.counter.id)}
+            className="btn btn-danger"
+          >
+            X
+          </button>
+        </div>
       </div>
     );
   }
-  handleIncrement = () => {
-    this.setState({ value: this.state.value + 1 });
-  };
 
-  deleteRow() {
-    return;
-  }
+  addClass = () => {
+    let customClass = "btn ";
+    if (this.props.counter.value === 0) {
+      customClass += "btn-danger";
+    } else {
+      customClass += "btn-warning";
+    }
+    return customClass;
+  };
 }
 export default Counter;

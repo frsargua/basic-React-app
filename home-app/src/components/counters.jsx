@@ -2,19 +2,22 @@ import React, { Component } from "react";
 import Counter from "./counter";
 
 class Counters extends Component {
-  state = {
-    counters: [
-      { id: 1, value: 0 },
-      { id: 2, value: 0 },
-      { id: 3, value: 0 },
-      { id: 4, value: 0 },
-    ],
-  };
   render() {
+    let { onIncrement, onDecrement, onDelete, value, id } = this.props;
     return (
-      <div>
-        {this.state.counters.map((counter) => (
-          <Counter key={counter.id} value={counter.value}></Counter>
+      <div className="container">
+        <button onClick={this.props.onReset} className="btn btn-secondary mx-2">
+          reset
+        </button>
+        {this.props.counters.map((counter) => (
+          <Counter
+            onIncrement={onIncrement}
+            onDecrement={onDecrement}
+            onDelete={onDelete}
+            value={counter.value}
+            counter={counter}
+            id={id}
+          ></Counter>
         ))}
       </div>
     );
