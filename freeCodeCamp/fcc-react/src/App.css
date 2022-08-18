@@ -1,38 +1,30 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --background-primary--color: #272c33;
+}
+
+.text-middle {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.custom-card {
+  width: 317px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card-header > h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.card-header > h2 {
+  font-size: 0.7rem;
+}
+.card-header > span {
+  font-size: 0.6rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-header > .card-actions-container > a {
+  padding: 0.25rem 0rem;
+  width: 115px;
+  max-width: 115px;
 }
