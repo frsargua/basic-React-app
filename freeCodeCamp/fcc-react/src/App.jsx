@@ -1,12 +1,18 @@
 import "./App.css";
-import Main from "./components/main";
-import Header from "./components/header";
+import TourCard from "./components/TourCard.js";
+import { Grid, Container } from "@mui/material";
+
 function App() {
   return (
-    <div className="custom-card mx-auto rounded-3 bg-warning">
-      <Header />
-      <Main />
-    </div>
+    <Container>
+      <Grid container spacing={4}>
+        <TourCard />
+        <TourCard />
+        <TourCard />
+        <TourCard />
+        <TourCard />
+      </Grid>
+    </Container>
   );
 }
 

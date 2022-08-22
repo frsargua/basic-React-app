@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+:root {
+  --background-primary--color: #1b1b21;
+  --font-secondary--color: #bd967b;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+.bg-marine {
+  background-color: var(--background-primary--color);
+}
+.text-gold {
+  color: var(--font-secondary--color);
+}
+
+.text-middle {
+  text-align: center;
+}
+
+.custom-card {
+  width: 317px;
+  color: white;
+}
+.custom-card img {
+  width: 100%;
+}
+
+main {
+  box-sizing: border-box;
+  padding: 24px 35px;
+}
+
+.card-header > h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.card-header > h2 {
+  font-size: 0.7rem;
+}
+.card-header > p {
+  font-size: 0.6rem;
+}
+
+.card-header > .card-actions-container > a {
+  padding: 0.25rem 0rem;
+  width: 115px;
+  max-width: 115px;
+}
+.card-header > .card-actions-container > a.btn-position {
+  margin-left: 16px;
+}
+
+.description-aboutMe-margin {
+  margin: 31px 0 22px 0;
+}
+
+.description-titles {
+  font-size: 16px;
+  font-weight: 700;
+}
+.description-text {
+  font-size: 10px;
+}
